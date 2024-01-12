@@ -1,0 +1,47 @@
+<div class="container shadow lg p-5 mb-5 bg-white rounded" style="padding: 5%;">
+    <div class="row justify-content-md-center">
+        <div class="col-12">
+            <div class="form-outline shadow lg p-5 mb-2 bg-white rounded">
+                <label class="form-label" for="firstname">Firstname</label>
+                <input [(ngModel)]="user.firstname" type="text" id="firstname" class="form-control">
+                <label class="form-label" for="lastname">Lastname</label>
+                <input [(ngModel)]="user.lastname" type="text" id="lastname" class="form-control">
+                <label class="form-label" for="email">Email</label>
+                <input [(ngModel)]="user.email" type="text" id="email" class="form-control">
+                <!-- <label class="form-label" for="password">Password</label>
+                <input [(ngModel)]="user.password" type="password" id="password" class="form-control"> -->
+            </div>
+            <button class="btn btn-block mb-3 col-12" style="background-color: rgba(0, 77, 0, 1); color: white" (click)="editUser()">Edit</button>
+            <div *ngIf="!addr">
+
+                <button type="button" class="btn btn-primary btn-block col-12" (click)="goToAddingAddress()">Add address</button>
+
+            </div>
+            <div *ngIf="addr">
+                <div class="container shadow lg p-5 mb-5 bg-white rounded">
+                    <h5>Address</h5>
+                    <div class="container shadow p-1 mb-2 bg-white rounded">
+
+                        {{addr.road}}
+
+
+                        {{addr.postalCode}}
+
+                        {{addr.city}}
+
+
+                        {{addr.country}}
+
+
+                    </div>
+                    <div>
+                        <button class="btn btn-block col-12 mb-2" style="background-color: rgba(0, 77, 0, 1); color: white" (click)="edit(addr)">Edit address</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-block col-12" style="background-color: rgba(153, 0, 0, 1); color: white" (click)="delete(addr)">Delete address</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container shadow lg p-5 mb-5 bg-white rounded" style="padding: 5%;">
+    <div class="row justify-content-md-center">
+        <div class="col-12">
+            <div class="form-outline mb-4">
+                <label class="form-label" for="road">Road</label>
+                <input [(ngModel)]="addr.road" type="text" id="road" class="form-control">
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="postalCode">PostalCode</label>
+                <input [(ngModel)]="addr.postalCode" type="text" id="postalCode" class="form-control">
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="city">City</label>
+                <input [(ngModel)]="addr.city" type="text" id="city" class="form-control">
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="country">Country</label>
+                <input [(ngModel)]="addr.country" type="text" id="country" class="form-control">
+            </div>
+        </div>
+        <button type="button" class="btn btn-block" style="background-color: rgba(0,0,255,.1)" (click)="add()">Add</button>
+    </div>
+</div>

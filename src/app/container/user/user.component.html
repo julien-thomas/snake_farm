@@ -1,0 +1,10 @@
+<div class="card h-100 w-auto p-3 m-3 shadow mb-5 bg-white rounded"> <!-- style="width: 18rem;" -->
+  <div class="card-body">
+    <h5 class="card-title">{{element.lastname}}</h5>
+    <p class="card-text">{{element.firstname}}</p>
+  </div>
+  <div class="card-footer">
+    {{element.email}}
+  </div>
+  <button type="button" class="btn btn-block mt-2" style="background-color: rgba(230, 115, 0, 1); color: white" (click)="goToProfile(element.id)">Edit</button>
+</div>

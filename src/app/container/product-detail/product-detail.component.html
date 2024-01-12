@@ -1,0 +1,12 @@
+<div class="card shadow lg p-3 m-3 mb-5 bg-white rounded" style="width: 50rem;">
+    <img src="{{product.picture}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">{{product.description}}</p>
+    </div>
+    <div class="card-footer">
+        {{product.price}} €
+    </div>
+    <button type="button" class="btn btn-block my-2 active" style="background-color: rgba(0, 77, 0, 1); color: white" (click)="editProduct(product)">Edit</button>
+    <button type="button" class="btn btn-block mb-2 active" style="background-color: rgba(153, 0, 0, 1); color: white" (click)="deleteProduct()">Delete</button>
+</div>

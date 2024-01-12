@@ -1,0 +1,11 @@
+<div class="card h-100 w-auto m-3 p-3 shadow mb-5 bg-white rounded"> <!-- style="width: 18rem;" -->
+  <img src="{{item.picture}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}}</h5>
+    <!-- <p class="card-text">{{item.description}}</p> -->
+  </div>
+  <div class="card-footer">
+    {{item.price}} €
+  </div>
+  <button type="button" class="btn btn-outline-dark btn-block my-2" (click)="getProduct(item.id)">Details</button>
+</div>

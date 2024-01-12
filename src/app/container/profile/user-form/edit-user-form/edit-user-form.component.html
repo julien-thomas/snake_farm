@@ -1,0 +1,25 @@
+<div class="container shadow lg p-5 mb-5 bg-white rounded" style="padding: 5%;">
+	<div class="row justify-content-md-center">
+		<div class="mb-3">
+			<label for="firstname" class="form-label">Firstname</label>
+			<input [(ngModel)]="user.firstname" type="text" class="form-control" name="firstname" id="firstname"
+				aria-describedby="firstnameHelp">
+		</div>
+		<div class="mb-3">
+			<label for="lastname" class="form-label">Lastname</label>
+			<input [(ngModel)]="user.lastname" type="text" class="form-control" name="lastname" id="lastname">
+		</div>
+		<div class="mb-3">
+			<label for="email" class="form-label">Email address</label>
+			<input [(ngModel)]="user.email" type="email" class="form-control" name="email" id="email"
+				aria-describedby="emailHelp">
+			<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+		</div>
+		<div class="mb-3">
+			<label for="password" class="form-label">Password</label>
+			<input [(ngModel)]="user.password" type="password" class="form-control" name="password" id="password">
+		</div>
+		<button type="submit" class="btn btn-block my-3" style="background-color: rgba(230, 115, 0, 1); color: white" (click)="editUser()">Edit</button>
+		<button type="submit" class="btn btn-block" style="background-color: rgba(153, 0, 0, 1); color: white" (click)="deleteUser()">Delete</button>
+	</div>
+</div>

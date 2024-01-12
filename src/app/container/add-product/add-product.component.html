@@ -1,0 +1,23 @@
+<div class="container shadow lg p-5 mb-5 bg-white rounded" style="padding: 5%;">
+    <div class="row justify-content-md-center">
+        <div class="col-12">
+            <div class="form-outline mb-4">
+                <label class="form-label" for="name">Name</label>
+                <input [(ngModel)]="name" type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="description">Description</label>
+                <input [(ngModel)]="description" type="text" id="description" name="description" class="form-control">
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="picture">Picture</label>
+                <input [(ngModel)]="picture" type="text" id="picture" name="picture" class="form-control">
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="price">Price</label>
+                <input [(ngModel)]="price" type="text" id="price" name="price" class="form-control">
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-dark btn-block" (click)="addProduct()">Add</button>
+    </div>
+</div>
