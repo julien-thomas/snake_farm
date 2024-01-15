@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../service/auth/auth.service';
+import { UserService } from '../../service/user/user.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,9 +9,11 @@ import { AuthService } from '../../service/auth/auth.service';
 })
 export class NavBarComponent implements OnInit {
   isLog: boolean = false
+  isAdmin: boolean = false
 
   constructor(
-    private _authService: AuthService
+    private _authService: AuthService,
+    private _userService: UserService
   ) {
 
   }
@@ -19,6 +22,10 @@ export class NavBarComponent implements OnInit {
     /* throw new Error('Method not implemented.'); */
     this._authService.user.subscribe(data => {
       this.isLog = data ? true : false
+    })
+    this._userService.getUserInfo().subscribe(data => {
+      if (data.role === 'admin') 
+        this.isAdmin = true
     })
   }
 

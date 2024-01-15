@@ -7,6 +7,14 @@
     <div class="card-footer">
         {{product.price}} €
     </div>
-    <button type="button" class="btn btn-block my-2 active" style="background-color: rgba(0, 77, 0, 1); color: white" (click)="editProduct(product)">Edit</button>
-    <button type="button" class="btn btn-block mb-2 active" style="background-color: rgba(153, 0, 0, 1); color: white" (click)="deleteProduct()">Delete</button>
+    <div *ngIf="isAdmin">
+        <button type="button" class="btn btn-block my-2 active col-12"
+            style="background-color: rgba(0, 77, 0, 1); color: white" (click)="editProduct(product)">Edit</button>
+        <button type="button" class="btn btn-block mb-2 active col-12"
+            style="background-color: rgba(153, 0, 0, 1); color: white" (click)="deleteProduct()">Delete</button>
+    </div>
+    <div *ngIf="!isAdmin">
+        <button type="button" class="btn btn-block my-2 active col-12"
+            style="background-color: rgba(0, 77, 0, 1); color: white" href="#">Buy</button>
+    </div>
 </div>
